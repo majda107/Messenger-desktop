@@ -19,7 +19,7 @@ function createWindow() {
     })
 
     mainWindow.webContents.on('dom-ready', function () {
-        fs.readFile(__dirname + '/style.css', 'utf8', function (error, data) {
+        fs.readFile(__dirname + '/styles/messenger/dark/style.css', 'utf8', function (error, data) {
             mainWindow.webContents.insertCSS(data)
         })
     })
