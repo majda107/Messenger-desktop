@@ -1,6 +1,7 @@
 .titlebar {
   width: 100%;
-  height: 4vw;
-  background-color: red;
+  height: 30px;
+  background-color: #0e1111 !important;
+  -webkit-app-region: drag;
 }
 /*# sourceMappingURL=titlebar.css.map */
