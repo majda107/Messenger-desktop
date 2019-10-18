@@ -16,6 +16,7 @@ function createWindow() {
         webPreferences: {
             nodeIntegration: false
         },
+        frame: false,
         titleBarStyle: "hiddenInset"
     })
 
@@ -23,6 +24,14 @@ function createWindow() {
 
     mainWindow.webContents.on('dom-ready', function () {
         fs.readFile(__dirname + '/styles/messenger/dark/style.css', 'utf8', function (error, data) {
+            mainWindow.webContents.insertCSS(data)
+        })
+
+        fs.readFile(__dirname + '/titlebar/titlebar.js', 'utf8', function(error, data) {
+            mainWindow.webContents.executeJavaScript(data)
+        })
+
+        fs.readFile(__dirname + '/titlebar/titlebar.css', 'utf8', function (error, data) {
             mainWindow.webContents.insertCSS(data)
         })
     })
