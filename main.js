@@ -11,12 +11,15 @@ function createWindow() {
 
 
     let mainWindow = new BrowserWindow({
-        width: 1920,
-        height: 1080,
+        width: 1280,
+        height: 720,
         webPreferences: {
             nodeIntegration: false
-        }
+        },
+        titleBarStyle: "hiddenInset"
     })
+
+    mainWindow.setMenu(null)
 
     mainWindow.webContents.on('dom-ready', function () {
         fs.readFile(__dirname + '/styles/messenger/dark/style.css', 'utf8', function (error, data) {

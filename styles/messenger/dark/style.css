@@ -62,21 +62,58 @@
   font-weight: bold;
 }
 
-._1htf, ._6zke span {
+._1htf ._6zke span {
   color: #636E72 !important;
   font-weight: 600;
+}
+
+._1ht3 ._1htf {
+  color: #bdc3c7 !important;
+  font-weight: 800;
 }
 
 ._58nk {
   color: #0e1111 !important;
 }
 
-._52mr, ._52mr._s1-, ._4qoc {
-  background-color: #F2F3F4 !important;
-}
-
 ._1wfr {
   background-color: #0e1111 !important;
   border-top: 1px solid #636e72 !important;
+}
+
+._3egs {
+  background: transparent !important;
+}
+
+._4k7a {
+  color: #bdc3c7 !important;
+}
+
+._5irm._7mkm {
+  background-color: #0e1111 !important;
+}
+
+._7oal g path {
+  fill: #F2F3F4 !important;
+}
+
+._7oal {
+  background-color: #0e1111 !important;
+}
+
+._30yy, ._7odb svg g path {
+  fill: #F2F3F4 !important;
+}
+
+._7oal path {
+  fill: #F2F3F4 !important;
+}
+
+body {
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
