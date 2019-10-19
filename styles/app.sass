@@ -1,0 +1,69 @@
+@import '../styles/messenger/dark/_variables'
+
+body
+    margin: 0
+    background-color: $background-color !important
+    // titlebar
+
+.titlebar
+    width: 100%
+    height: 5vh
+    background-color: $background-color !important
+    display: grid
+    grid-template-columns: 90% 10%
+    //background-color: red
+    // -webkit-app-region: drag
+
+    &-drag
+        width: 100%
+        height: 100%
+        -webkit-app-region: drag
+
+    &-buttons
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: flex-end
+        //justify-content: space-around
+
+        &-span
+            margin-right: 10px
+            display: flex
+            justify-content: space-around
+            height: 16px
+            width: 80px
+
+    &-button
+        display: inline-block
+        width: 12px
+        height: 12px
+        border: 0
+        border-radius: 14px
+        border: 2px solid transparent
+
+#button
+    &-close
+        background-color: #FB625D
+        border-color: #A03632
+
+    &-maximize
+        background-color: #FCBF40
+        border-color: #A27323
+    
+    &-hide
+        background-color: #34C949
+        border-color: #166A1F
+
+.button
+    width: 50px
+    height: 20px
+    background-color: $highlight-color !important
+
+    // end titlebar
+
+#view
+    width: 100%
+    height: 95vh
+    overflow-x: hidden
+    overflow-y: hidden

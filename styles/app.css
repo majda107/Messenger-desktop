@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  background-color: #0e1111 !important;
+}
+
+.titlebar {
+  width: 100%;
+  height: 5vh;
+  background-color: #0e1111 !important;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 90% 10%;
+      grid-template-columns: 90% 10%;
+}
+
+.titlebar-drag {
+  width: 100%;
+  height: 100%;
+  -webkit-app-region: drag;
+}
+
+.titlebar-buttons {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.titlebar-buttons-span {
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 16px;
+  width: 80px;
+}
+
+.titlebar-button {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 0;
+  border-radius: 14px;
+  border: 2px solid transparent;
+}
+
+#button-close {
+  background-color: #FB625D;
+  border-color: #A03632;
+}
+
+#button-maximize {
+  background-color: #FCBF40;
+  border-color: #A27323;
+}
+
+#button-hide {
+  background-color: #34C949;
+  border-color: #166A1F;
+}
+
+.button {
+  width: 50px;
+  height: 20px;
+  background-color: #F2F3F4 !important;
+}
+
+#view {
+  width: 100%;
+  height: 95vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+/*# sourceMappingURL=app.css.map */

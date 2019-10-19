@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Messenger</title>
+    <link rel="stylesheet" href="./styles/app.css">
+</head>
+
+<body>
+    <div class="titlebar">
+        <div class="titlebar-drag"></div>
+        <div class="titlebar-buttons">
+            <span class="titlebar-buttons-span">
+                <div class="titlebar-button" id="button-hide"></div>
+                <div class="titlebar-button" id="button-maximize"></div>
+                <div class="titlebar-button" id="button-close"></div>
+            </span>
+        </div>
+    </div>
+
+    <webview preload="./messenger.js" id='view' src="https://www.messenger.com/"></webview>
+
+    <script src="browser.js">
+    </script>
+</body>
+
+</html>

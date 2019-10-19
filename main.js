@@ -1,4 +1,6 @@
-const { app, BrowserWindow, session } = require('electron');
+const { app, remote, BrowserWindow, session } = require('electron')
+ipc = require('electron').ipcMain;
+//export 
 
 var fs = require('fs');
 
@@ -14,7 +16,8 @@ function createWindow() {
         width: 1280,
         height: 720,
         webPreferences: {
-            nodeIntegration: false
+            nodeIntegration: true,
+            webviewTag: true
         },
         frame: false,
         titleBarStyle: "hiddenInset"
@@ -22,22 +25,47 @@ function createWindow() {
 
     mainWindow.setMenu(null)
 
-    mainWindow.webContents.on('dom-ready', function () {
-        fs.readFile(__dirname + '/styles/messenger/dark/style.css', 'utf8', function (error, data) {
-            mainWindow.webContents.insertCSS(data)
-        })
+    // mainWindow.webContents.on('dom-ready', function () {
+    //     // fs.readFile(__dirname + '/styles/messenger/dark/style.css', 'utf8', function (error, data) {
+    //     //     mainWindow.webContents.insertCSS(data)
+    //     // })
 
-        fs.readFile(__dirname + '/titlebar/titlebar.js', 'utf8', function(error, data) {
-            mainWindow.webContents.executeJavaScript(data)
-        })
+    //     fs.readFile(__dirname + '/titlebar.js', 'utf8', function (error, data) {
+    //         mainWindow.webContents.executeJavaScript(data)
 
-        fs.readFile(__dirname + '/titlebar/titlebar.css', 'utf8', function (error, data) {
-            mainWindow.webContents.insertCSS(data)
-        })
+    //         ipc.on('close-button-pressed', () => {
+    //             console.log('lol')
+    //         })
+    //     })
+
+    //     fs.readFile(__dirname + '/titlebar/titlebar.css', 'utf8', function (error, data) {
+    //         mainWindow.webContents.insertCSS(data)
+    //     })
+    // })
+
+    //window.document.getElementById('view').style.backgroundColor = 'red'
+
+    ipc.on('button-close', () => {
+        mainWindow.close()
     })
 
-    mainWindow.webContents.openDevTools();
-    mainWindow.loadURL("http://messenger.com")
+    ipc.on('button-maximize', () => {
+        if(mainWindow.isMaximizable)
+        {
+            mainWindow.maximize()
+        }
+        else
+        {
+            mainWindow.maximize()
+        }
+    })
+
+    ipc.on('button-hide', () => {
+        mainWindow.minimize()
+    })
+
+    //mainWindow.webContents.openDevTools()
+    mainWindow.loadFile("index.html")
 }
 
 app.on('ready', createWindow)
