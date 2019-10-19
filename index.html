@@ -8,18 +8,24 @@
 </head>
 
 <body>
-    <div class="titlebar">
-        <div class="titlebar-drag"></div>
-        <div class="titlebar-buttons">
-            <span class="titlebar-buttons-span">
-                <div class="titlebar-button" id="button-hide"></div>
-                <div class="titlebar-button" id="button-maximize"></div>
-                <div class="titlebar-button" id="button-close"></div>
-            </span>
+    <main class="app">
+        <div class="titlebar">
+            <div class="titlebar-drag"></div>
+            <div class="titlebar-buttons">
+                <div class="titlebar-button" id="button-hide">
+                    <span>&#xE921;</span>
+                </div>
+                <div class="titlebar-button" id="button-maximize">
+                    <span>&#xE922;</span>
+                </div>
+                <div class="titlebar-button" id="button-close">
+                    <span>&#xE8BB</span>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <webview preload="./messenger.js" id='view' src="https://www.messenger.com/"></webview>
+        <webview preload="./messenger.js" id='view' src="https://www.messenger.com/"></webview>
+    </main>
 
     <script src="browser.js">
     </script>

@@ -7,10 +7,10 @@ body
 
 .titlebar
     width: 100%
-    height: 5vh
+    height: 20px
     background-color: $background-color !important
-    display: grid
-    grid-template-columns: 90% 10%
+    display: flex
+    //grid-template-columns: 100% 100px
     //background-color: red
     // -webkit-app-region: drag
 
@@ -20,40 +20,27 @@ body
         -webkit-app-region: drag
 
     &-buttons
-        width: 100%
+        width: 80px
         height: 100%
         display: flex
-        align-items: center
-        justify-content: flex-end
-        //justify-content: space-around
+        justify-content: center
+        align-items: stretch
 
-        &-span
-            margin-right: 10px
-            display: flex
-            justify-content: space-around
-            height: 16px
-            width: 80px
 
     &-button
         display: inline-block
-        width: 12px
-        height: 12px
-        border: 0
-        border-radius: 14px
-        border: 2px solid transparent
+        width: 100%
+        height: 100%
+        font-family: "Segoe MDL2 Assets"
+        color: $highlight-color
+        font-weight: 100
+        font-size: 10px
+        text-align: center
+        line-height: 20px
 
-#button
-    &-close
-        background-color: #FB625D
-        border-color: #A03632
+    &-button:hover
+        background-color: $bubble-color
 
-    &-maximize
-        background-color: #FCBF40
-        border-color: #A27323
-    
-    &-hide
-        background-color: #34C949
-        border-color: #166A1F
 
 .button
     width: 50px
@@ -62,8 +49,21 @@ body
 
     // end titlebar
 
+
+.app 
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: stretch
+    flex-wrap: wrap
+    flex-direction: column
+    overflow-x: hidden
+    overflow-y: hidden
+
 #view
+    background-color: $background-color !important
     width: 100%
-    height: 95vh
+    flex-grow: 100  
+    flex-shrink: 1
     overflow-x: hidden
     overflow-y: hidden

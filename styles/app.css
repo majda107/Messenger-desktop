@@ -1,16 +1,15 @@
 body {
   margin: 0;
-  background-color: #0e1111 !important;
+  background-color: #141414 !important;
 }
 
 .titlebar {
   width: 100%;
-  height: 5vh;
-  background-color: #0e1111 !important;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 90% 10%;
-      grid-template-columns: 90% 10%;
+  height: 20px;
+  background-color: #141414 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .titlebar-drag {
@@ -20,52 +19,33 @@ body {
 }
 
 .titlebar-buttons {
-  width: 100%;
+  width: 80px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-}
-
-.titlebar-buttons-span {
-  margin-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  height: 16px;
-  width: 80px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .titlebar-button {
   display: inline-block;
-  width: 12px;
-  height: 12px;
-  border: 0;
-  border-radius: 14px;
-  border: 2px solid transparent;
+  width: 100%;
+  height: 100%;
+  font-family: "Segoe MDL2 Assets";
+  color: #F2F3F4;
+  font-weight: 100;
+  font-size: 10px;
+  text-align: center;
+  line-height: 20px;
 }
 
-#button-close {
-  background-color: #FB625D;
-  border-color: #A03632;
-}
-
-#button-maximize {
-  background-color: #FCBF40;
-  border-color: #A27323;
-}
-
-#button-hide {
-  background-color: #34C949;
-  border-color: #166A1F;
+.titlebar-button:hover {
+  background-color: #242424;
 }
 
 .button {
@@ -74,9 +54,35 @@ body {
   background-color: #F2F3F4 !important;
 }
 
+.app {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 #view {
+  background-color: #141414 !important;
   width: 100%;
-  height: 95vh;
+  -webkit-box-flex: 100;
+      -ms-flex-positive: 100;
+          flex-grow: 100;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
   overflow-x: hidden;
   overflow-y: hidden;
 }
