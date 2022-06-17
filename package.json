@@ -6,7 +6,7 @@
     "start": "electron ."
   },
   "devDependencies": {
-    "electron": "^6.0.12"
+    "electron": "^15.5.5"
   },
   "dependencies": {
     "sass": "^1.23.0"
